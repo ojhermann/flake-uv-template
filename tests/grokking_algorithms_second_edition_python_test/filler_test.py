@@ -1,6 +1,6 @@
 import pytest
 
-from grokking_algorithms_second_edition_python.filler import dummy
+from grokking.filler import dummy
 
 
 @pytest.mark.unit_test
