@@ -7,7 +7,6 @@ hooks = [
     language = "system",
     entry = "nix flake update",
     pass_filenames = false,
-    stages = ["pre-commit"],
   },
   {
     id = "nixfmt",
@@ -30,6 +29,13 @@ hooks = [
     language = "system",
     entry = "deadnix --fail",
     types = ["nix"],
+  },
+  {
+    id = "uv-sync",
+    name = "uv sync",
+    language = "system",
+    entry = "uv sync",
+    pass_filenames = false,
   },
   {
     id = "ruff-check",
@@ -59,6 +65,5 @@ hooks = [
     language = "system",
     entry = "pytest -m unit_test",
     pass_filenames = false,
-    stages = ["pre-commit"],
   },
 ]

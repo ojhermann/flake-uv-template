@@ -35,3 +35,6 @@ force-sort-within-sections = true
 
 [tool.uv]
 default-groups = ["dev"]
+
+[tool.uv.build-backend]
+module-name = "grokking"
