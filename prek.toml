@@ -68,6 +68,13 @@ hooks = [
     types = ["python"],
   },
   {
+    id = "check-test-naming",
+    name = "check test naming",
+    language = "system",
+    entry = "python scripts/check_test_naming.py",
+    pass_filenames = false,
+  },
+  {
     id = "pytest-unit",
     name = "pytest unit tests",
     language = "system",
