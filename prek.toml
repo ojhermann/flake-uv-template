@@ -1,0 +1,34 @@
+[[repos]]
+repo = "local"
+hooks = [
+  {
+    id = "nix-flake-update",
+    name = "update flake.lock",
+    language = "system",
+    entry = "nix flake update",
+    pass_filenames = false,
+    stages = ["pre-commit"],
+  },
+  {
+    id = "nixfmt",
+    name = "nixfmt",
+    language = "system",
+    entry = "nixfmt",
+    types = ["nix"],
+  },
+  {
+    id = "statix",
+    name = "statix",
+    language = "system",
+    entry = "statix check",
+    pass_filenames = false,
+    types = ["nix"],
+  },
+  {
+    id = "deadnix",
+    name = "deadnix",
+    language = "system",
+    entry = "deadnix --fail",
+    types = ["nix"],
+  },
+]
