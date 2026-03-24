@@ -12,7 +12,19 @@ requires = ["uv_build>=0.10.12,<0.11.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
-dev = ["pytest>=9.0.2", "ruff>=0.15.7", "ty>=0.0.24"]
+dev = [
+    "jedi-language-server>=0.46.0",
+    "pytest>=9.0.2",
+    "python-lsp-server>=1.14.0",
+    "ruff>=0.15.7",
+    "ty>=0.0.24",
+]
 
 [tool.uv]
 default-groups = ["dev"]
+
+[tool.ruff.lint]
+select = ["I"]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
