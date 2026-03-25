@@ -1,12 +1,25 @@
-# {{ project_slug }}
+# flake-uv-template
 
-{{ description }}
+A [copier](https://copier.readthedocs.io) template for Python projects using Nix flakes and uv.
 
-## helpful things
+## Usage
 
-### direnv
+```bash
+copier copy https://github.com/ojhermann/flake-uv-template /path/to/new-project
+```
 
-`rm -rf .direnv && direnv reload`
+You will be prompted for:
 
-- this will help if there are issues with `direnv`
-- e.g. a `nix-direnv` initialisation ordering issue
+- `project_slug` — hyphen-separated project name (e.g. `my-project`)
+- `module_name` — underscore-separated Python module name (e.g. `my_module`)
+- `description` — short project description
+- `author_name` — your full name
+- `author_email` — your email address
+
+## Updating a generated project
+
+If the template changes, you can pull in updates from inside a generated project:
+
+```bash
+copier update
+```
