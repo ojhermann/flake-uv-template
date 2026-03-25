@@ -2,6 +2,14 @@
 repo = "local"
 
 [[repos.hooks]]
+id = "no-commit-to-main"
+name = "no commit to main"
+language = "system"
+entry = "bash -c 'branch=$(git branch --show-current); if [ \"$branch\" = \"main\" ]; then echo \"Direct commits to main are not allowed.\"; exit 1; fi'"
+pass_filenames = false
+always_run = true
+
+[[repos.hooks]]
 id = "nix-flake-check"
 name = "nix flake check"
 language = "system"
