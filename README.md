@@ -1,6 +1,14 @@
 # flake-uv-template
 
-A [copier](https://copier.readthedocs.io) template for Python projects using Nix flakes and uv.
+A [copier](https://copier.readthedocs.io) template for Python projects using Nix
+flakes and uv.
+
+## Expectations
+
+- [Nix](https://nixos.org/) installed on the destination machine
+- [direnv](https://direnv.net/) installed on the destination machine
+- [nix-direnv](https://github.com/nix-community/nix-direnv) installed on the
+  destination machine
 
 ## Usage
 
@@ -18,7 +26,8 @@ You will be prompted for:
 
 ## Updating a generated project
 
-If the template changes, you can pull in updates from inside a generated project:
+If the template changes, you can pull in updates from inside a generated
+project:
 
 ```bash
 copier update

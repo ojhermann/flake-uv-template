@@ -25,11 +25,14 @@
         {
           default = pkgs.mkShell {
             packages = [
-              pkgs.prek
-              pkgs.uv
-              pkgs.nixfmt
-              pkgs.statix
               pkgs.deadnix
+              pkgs.helix
+              pkgs.nixfmt
+              pkgs.prek
+              pkgs.statix
+              pkgs.uv
+              pkgs.watchexec
+              pkgs.zellij
             ];
           };
         }
