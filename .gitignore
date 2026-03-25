@@ -1,5 +1,13 @@
 # Nix
 .direnv/
 
+# Python
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Claude Code
+.claude/projects/
+
 # copier
 .copier-answers.yml
