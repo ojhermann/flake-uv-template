@@ -1,6 +1,6 @@
 import pytest
 
-from grokking.filler import dummy
+from {{ module_name }}.filler import dummy
 
 
 @pytest.mark.unit_test

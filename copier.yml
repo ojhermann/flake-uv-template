@@ -1,0 +1,23 @@
+_subdirectory: template
+_templates_suffix: ""
+
+project_slug:
+    type: str
+    help: Project slug (hyphen-separated, e.g. my-project)
+
+module_name:
+    type: str
+    help: Python module name (underscore-separated, e.g. my_module)
+
+description:
+    type: str
+    help: Short project description
+    default: ""
+
+author_name:
+    type: str
+    help: Author full name
+
+author_email:
+    type: str
+    help: Author email address

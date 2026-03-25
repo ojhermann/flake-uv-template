@@ -1,9 +1,9 @@
 [project]
-name = "grokking-algorithms-second-edition-python"
+name = "{{ project_slug }}"
 version = "0.1.0"
-description = "Add your description here"
+description = "{{ description }}"
 readme = "README.md"
-authors = [{ name = "Otto Hermann", email = "ojhermann@gmail.com" }]
+authors = [{ name = "{{ author_name }}", email = "{{ author_email }}" }]
 requires-python = ">=3.14"
 dependencies = []
 
@@ -19,7 +19,6 @@ dev = [
   "ruff>=0.15.7",
   "ty>=0.0.24",
 ]
-
 
 [tool.pytest]
 addopts = ["--strict-markers"]
@@ -37,4 +36,4 @@ force-sort-within-sections = true
 default-groups = ["dev"]
 
 [tool.uv.build-backend]
-module-name = "grokking"
+module-name = "{{ module_name }}"

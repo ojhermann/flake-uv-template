@@ -1,5 +1,5 @@
 {
-  description = "A copier template for Nix flake + uv Python projects";
+  description = "{{ description }}";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
