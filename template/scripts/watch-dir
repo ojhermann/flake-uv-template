@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+exec watchexec -c \
+    --watch . --watch .git/index --watch .git/HEAD \
+    --no-vcs-ignore \
+    -i ".git/objects/**" -i ".git/logs/**" \
+    -- gst

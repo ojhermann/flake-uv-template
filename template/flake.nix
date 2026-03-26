@@ -21,14 +21,6 @@
         system:
         let
           pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-          gst = pkgs.writeShellScriptBin "gst" "exec git status \"$@\"";
-          watch-dir = pkgs.writeShellScriptBin "watch-dir" ''
-            exec watchexec -c \
-              --watch . --watch .git/index --watch .git/HEAD \
-              --no-vcs-ignore \
-              -i ".git/objects/**" -i ".git/logs/**" \
-              -- gst
-          '';
         in
         {
           default = pkgs.mkShell {
@@ -44,9 +36,10 @@
               pkgs.uv
               pkgs.watchexec
               pkgs.zellij
-              gst
-              watch-dir
             ];
+            shellHook = ''
+              export PATH="$PWD/scripts:$PATH"
+            '';
           };
         }
       );
