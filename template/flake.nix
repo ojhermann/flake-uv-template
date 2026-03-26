@@ -21,8 +21,8 @@
         system:
         let
           pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-          gst = pkgs.writeShellScriptBin "gst" "exec ${./scripts/gst} \"$@\"";
-          watch-dir = pkgs.writeShellScriptBin "watch-dir" "exec ${./scripts/watch-dir}";
+          gst = import ./packages/gst.nix { inherit pkgs; };
+          watch-dir = import ./packages/watch-dir.nix { inherit pkgs gst; };
         in
         {
           default = pkgs.mkShell {
@@ -35,6 +35,7 @@
               pkgs.nixfmt
               pkgs.prek
               pkgs.statix
+              pkgs.tree
               pkgs.uv
               pkgs.watchexec
               pkgs.zellij
