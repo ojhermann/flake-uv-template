@@ -5,7 +5,7 @@ layout {
         }
         pane split_direction="vertical" {
             pane command="direnv" name="dir" size="20%" {
-                args "exec" "." "watchexec" "-c" "--watch" "." "--watch" ".git/index" "--watch" ".git/HEAD" "--no-vcs-ignore" "-i" ".git/objects/**" "-i" ".git/logs/**" "--" "gst"
+                args "exec" "." "watch-dir"
                 start_suspended false
             }
             pane size="80%" {
