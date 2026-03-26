@@ -20,7 +20,7 @@
       devShells = forAllSystems (
         system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
           gst = pkgs.writeShellScriptBin "gst" "exec git status \"$@\"";
           watch-dir = pkgs.writeShellScriptBin "watch-dir" ''
             exec watchexec -c \
